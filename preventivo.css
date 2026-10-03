@@ -1,134 +1,138 @@
-/* Sezione preventivo */
-.quote-section {
-  background-color: #f4f6f8;
-  padding: 40px 15px;
-  font-family: Arial, sans-serif;
-}
+<section class="quote-section">
+  <div class="quote-container">
+    <h2>Richiedi un Preventivo Dettagliato</h2>
+    <p>Compila i campi sottostanti con le specifiche del tuo progetto per ricevere un preventivo preciso da Giuseppe Liddi.</p>
 
-.quote-container {
-  max-width: 750px;
-  margin: 0 auto;
-  background: #ffffff;
-  padding: 35px;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-}
+    <form action="https://formspree.io/f/xnpnewbz" method="POST" enctype="multipart/form-data" class="quote-form">
+      
+      <!-- Sezione 1: Dati Anagrafici e Contatto -->
+      <fieldset>
+        <legend>1. Dati di Contatto</legend>
+        
+        <div class="form-group">
+          <label for="fullname">Nome e Cognome *</label>
+          <input type="text" id="fullname" name="Nome Completo" placeholder="es. Mario Rossi" required>
+        </div>
 
-.quote-container h2 {
-  color: #1b365d;
-  text-align: center;
-  margin-bottom: 8px;
-  font-size: 26px;
-}
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="Email" placeholder="es. mario@gmail.com" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Telefono / WhatsApp *</label>
+            <input type="tel" id="phone" name="Telefono" placeholder="es. 333 1234567" required>
+          </div>
+        </div>
 
-.quote-container p {
-  color: #666;
-  text-align: center;
-  margin-bottom: 30px;
-  font-size: 15px;
-}
+        <div class="form-group">
+          <label for="location">Indirizzo / Comune del Cantiere *</label>
+          <input type="text" id="location" name="Indirizzo Cantiere" placeholder="es. Via Roma 10, Bertinoro (FC)" required>
+        </div>
+      </fieldset>
 
-/* Gruppi di campi (Fieldset) */
-fieldset {
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  padding: 20px;
-  margin-bottom: 25px;
-  background-color: #fafafa;
-}
+      <!-- Sezione 2: Dettagli della Recinzione -->
+      <fieldset>
+        <legend>2. Dettagli del Lavoro</legend>
 
-legend {
-  font-weight: bold;
-  color: #2e7d32; /* Verde sicurezza */
-  padding: 0 10px;
-  font-size: 16px;
-}
+        <div class="form-group">
+          <label for="service">Tipo di Struttura / Servizio *</label>
+          <select id="service" name="Tipo Servizio" required>
+            <option value="" disabled selected hidden>Seleziona un'opzione</option>
+            <option value="Recinzione Residenziale / Giardino">Recinzione Residenziale / Giardino</option>
+            <option value="Protezione Animali Domestici">Protezione Animali Domestici (Cani, Gatti, ecc.)</option>
+            <option value="Campo da Calcio / Impianto Sportivo">Campo da Calcio / Impianto Sportivo</option>
+            <option value="Recinzione Industriale / Commerciale">Recinzione Industriale / Commerciale</option>
+            <option value="Recinzione Agricola / Maneggio">Recinzione Agricola / Maneggio / Terreno</option>
+          </select>
+        </div>
 
-/* Struttura form */
-.quote-form .form-group {
-  margin-bottom: 18px;
-  display: flex;
-  flex-direction: column;
-}
+        <div class="form-row">
+          <div class="form-group">
+            <label for="meters">Metri Lineari Totali (circa) *</label>
+            <input type="number" id="meters" name="Metri Lineari" placeholder="es. 45" min="1" required>
+          </div>
+          <div class="form-group">
+            <label for="height">Altezza Desiderata (cm) *</label>
+            <select id="height" name="Altezza Recinzione" required>
+              <option value="" disabled selected hidden>Seleziona altezza</option>
+              <option value="100 cm">100 cm (1 metro)</option>
+              <option value="125 cm">125 cm</option>
+              <option value="150 cm">150 cm</option>
+              <option value="175 cm">175 cm</option>
+              <option value="200 cm">200 cm (2 metri)</option>
+              <option value="Oltre 200 cm (es. Campo da Calcio)">Oltre 2 metri (Sport/Industriale)</option>
+            </select>
+          </div>
+        </div>
 
-.quote-form .form-row {
-  display: flex;
-  gap: 15px;
-}
+        <div class="form-group">
+          <label for="material">Tipologia di Materiale Preferito</label>
+          <select id="material" name="Materiale Preferito">
+            <option value="Non so / Consiglio Tecnico">Non so / Chiedo consiglio a Giuseppe Liddi</option>
+            <option value="Rete Plastificata a Maglia Sciolta">Rete Plastificata a Maglia Sciolta (Verde/Zincata)</option>
+            <option value="Pannelli Elettrosaldati Rigidi">Pannelli Elettrosaldati Rigidi (Rigida/Elegante)</option>
+            <option value="Rete Pastorale / Agricola">Rete Pastorale / Agricola</option>
+            <option value="Rete da Campo Sportivo / Paralluoghi">Rete Alta per Campi da Calcio / Impianti Sportivi</option>
+            <option value="Legno / Decorativo">Legno / Misto Legno e Rete</option>
+          </select>
+        </div>
+      </fieldset>
 
-.quote-form .form-row .form-group {
-  flex: 1;
-}
+      <!-- Sezione 3: Terreno e Accessibilità -->
+      <fieldset>
+        <legend>3. Caratteristiche del Terreno e Cantiere</legend>
 
-.quote-form label {
-  font-weight: 600;
-  margin-bottom: 6px;
-  color: #333;
-  font-size: 14px;
-}
+        <div class="form-row">
+          <div class="form-group">
+            <label for="ground-type">Fondo / Terreno *</label>
+            <select id="ground-type" name="Tipo di Fondo" required>
+              <option value="" disabled selected hidden>Seleziona tipo di terreno</option>
+              <option value="Terra / Prato">Terra / Prato naturale</option>
+              <option value="Muretto in Cemento già Esistente">Muretto in Cemento già Esistente</option>
+              <option value="Asfalto / Cemento Piano">Pavimentazione in Asfalto o Cemento</option>
+              <option value="Roccioso / Sassi">Terreno Roccioso / Sassi</option>
+            </select>
+          </div>
 
-.quote-form input[type="text"],
-.quote-form input[type="email"],
-.quote-form input[type="tel"],
-.quote-form input[type="number"],
-.quote-form select,
-.quote-form textarea {
-  padding: 11px 14px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 14px;
-  outline: none;
-  background-color: #fff;
-  transition: border-color 0.2s;
-}
+          <div class="form-group">
+            <label for="slope">Pendenza del Terreno *</label>
+            <select id="slope" name="Pendenza Terreno" required>
+              <option value="" disabled selected hidden>Seleziona pendenza</option>
+              <option value="Pianeggiante">Pianeggiante (In piano)</option>
+              <option value="Lieve Pendenza">Lieve Pendenza</option>
+              <option value="Forte Pendenza / A Gradoni">Forte Pendenza / Dislivelli / Gradoni</option>
+            </select>
+          </div>
+        </div>
 
-.quote-form input:focus,
-.quote-form select:focus,
-.quote-form textarea:focus {
-  border-color: #2e7d32;
-}
+        <div class="form-group">
+          <label for="removal">C'è una vecchia recinzione da smantellare?</label>
+          <select id="removal" name="Smaltimento Vecchia Recinzione">
+            <option value="No">No, il terreno è già libero</option>
+            <option value="Sì, da smontare e smaltire">Sì, occorre rimuovere e smaltire la vecchia recinzione</option>
+          </select>
+        </div>
+      </fieldset>
 
-/* Gestione placeholder colore grigio per select non selezionate */
-.quote-form select:invalid {
-  color: #888888;
-}
+      <!-- Sezione 4: Note Aggiuntive e Allegati -->
+      <fieldset>
+        <legend>4. Dettagli Aggiuntivi</legend>
 
-.quote-form select option {
-  color: #333333;
-}
+        <div class="form-group">
+          <label for="notes">Esigenze particolari o descrizioni</label>
+          <textarea id="notes" name="Note e Dettagli" rows="4" placeholder="Indica ad esempio: presenza di cani di taglia grande (esigenza anti-scavo), necessità di frangivista/privacy, orari di contatto preferiti, ecc."></textarea>
+        </div>
 
-.help-text {
-  font-size: 12px;
-  color: #777;
-  margin-top: 4px;
-}
+        <div class="form-group">
+          <label for="photos">Carica foto del terreno/area (opzionale)</label>
+          <input type="file" id="photos" name="Foto Terreno" accept="image/*" multiple>
+          <small class="help-text">Puoi selezionare più immagini della zona da recintare per aiutarci nella stima.</small>
+        </div>
+      </fieldset>
 
-/* Bottone Invia */
-.btn-submit {
-  width: 100%;
-  background-color: #2e7d32;
-  color: #ffffff;
-  padding: 16px;
-  font-size: 17px;
-  font-weight: bold;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
+      <button type="submit" class="btn-submit">Richiedi Preventivo Completo</button>
 
-.btn-submit:hover {
-  background-color: #1b5e20;
-}
-
-/* Responsive per Cellulari */
-@media (max-width: 600px) {
-  .quote-form .form-row {
-    flex-direction: column;
-    gap: 0;
-  }
-  
-  .quote-container {
-    padding: 20px 15px;
-  }
-}
+    </form>
+  </div>
+</section>
