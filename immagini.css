@@ -50,35 +50,71 @@
     display: block;            /* Mantiene le proporzioni dell'immagine */
 }
 
+/* RESET GENERALE PER MOBILE E PC */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #d0d7de; /* Colore di sfondo simile al tuo */
+  color: #222222;
+  line-height: 1.6;
+  padding: 20px 15px;
+  text-align: center;
+}
+
+/* SISTEMA LE IMMAGINI CHE SI SOVRAPPONGONO */
 img {
-  max-width: 100% !important;
-  height: auto !important;
-  display: block !important;
-  margin: 10px auto !important;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 15px auto;
+  border-radius: 8px;
 }
 
-/* Se le immagini sono dentro un contenitore (div/header), le mette in colonna */
-header, div, .container {
-  max-width: 100% !important;
-  box-sizing: border-box !important;
+/* Se hai due immagini affiancate, le mette una sotto l'altra su smartphone */
+.image-container, header, div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
 }
 
-/* Se hai usato Flexbox o Float per affiancare le immagini del logo, le incolonna su schermi piccoli */
-@media (max-width: 768px) {
-  body {
-    padding: 15px !important;
-  }
-  
-  /* Dispone tutti gli elementi affiancati uno SOTTO l'altro */
-  header, div, section, .row {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-  }
+/* TITOLI E TESTI */
+h1, h2 {
+  color: #111111;
+  margin: 20px 0 10px 0;
+  font-size: 24px;
+}
 
-  /* Centra i link e li rende più facili da cliccare col dito */
-  a {
-    word-break: break-word;
-    text-align: center;
-  }
+p {
+  max-width: 600px;
+  margin: 0 auto 15px auto;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* TRASFORMA I LINK BLU IN PULSANTI BELLI E CENTRATI */
+a {
+  display: inline-block;
+  background-color: #1b365d;
+  color: #ffffff !important;
+  text-decoration: none;
+  padding: 12px 20px;
+  margin: 10px auto;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 15px;
+  width: 100%;
+  max-width: 300px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+}
+
+a:hover {
+  background-color: #2e7d32;
 }
