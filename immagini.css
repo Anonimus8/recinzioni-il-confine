@@ -49,3 +49,33 @@
     height: auto;  
     display: block;            /* Mantiene le proporzioni dell'immagine */
 }
+
+
+img {
+  max-width: 100% !important;
+  height: auto !important;
+  display: block;
+}
+
+/* 2. Elimina lo scorrimento orizzontale che fa sembrare il sito storto */
+html, body {
+  overflow-x: hidden !important;
+  width: 100% !important;
+  margin: 0 !important;
+}
+
+/* 3. Quando lo schermo è piccolo (cellulare), mette testo e immagini uno SOTTO l'altro */
+@media (max-width: 768px) {
+  /* Se usi blocchi o righe affiancate, le incolonna in verticale */
+  div, section, .row, .container, .flex {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Se nel tuo CSS avevi usato flexbox o float per affiancare testo e foto */
+  [class*="col-"], .hero, .about, .servizi {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+}
