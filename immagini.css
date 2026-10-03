@@ -49,23 +49,3 @@
     height: auto;  
     display: block;            /* Mantiene le proporzioni dell'immagine */
 }
-
-/* TRASFORMA I LINK BLU IN PULSANTI BELLI E CENTRATI */
-a {
-  display: inline-block;
-  background-color: #1b365d;
-  color: #ffffff !important;
-  text-decoration: none;
-  padding: 12px 20px;
-  margin: 10px auto;
-  border-radius: 6px;
-  font-weight: bold;
-  font-size: 15px;
-  width: 100%;
-  max-width: 300px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16);
-}
-
-a:hover {
-  background-color: #2e7d32;
-}
