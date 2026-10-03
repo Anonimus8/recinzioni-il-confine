@@ -50,55 +50,6 @@
     display: block;            /* Mantiene le proporzioni dell'immagine */
 }
 
-/* RESET GENERALE PER MOBILE E PC */
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #d0d7de; /* Colore di sfondo simile al tuo */
-  color: #222222;
-  line-height: 1.6;
-  padding: 20px 15px;
-  text-align: center;
-}
-
-/* SISTEMA LE IMMAGINI CHE SI SOVRAPPONGONO */
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto 15px auto;
-  border-radius: 8px;
-}
-
-/* Se hai due immagini affiancate, le mette una sotto l'altra su smartphone */
-.image-container, header, div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-  width: 100%;
-}
-
-/* TITOLI E TESTI */
-h1, h2 {
-  color: #111111;
-  margin: 20px 0 10px 0;
-  font-size: 24px;
-}
-
-p {
-  max-width: 600px;
-  margin: 0 auto 15px auto;
-  font-size: 16px;
-  text-align: center;
-}
-
 /* TRASFORMA I LINK BLU IN PULSANTI BELLI E CENTRATI */
 a {
   display: inline-block;
