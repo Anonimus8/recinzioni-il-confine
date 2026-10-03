@@ -1,0 +1,64 @@
+.titolo{
+
+  font-family: "Noto Serif", serif;
+  font-optical-sizing: auto;
+   font-weight: bold;
+   font-size: 50px;
+  text-align: center;
+}
+
+
+
+
+.testoimportante{
+  
+font-family: "Noto Serif", serif;
+  font-optical-sizing: auto;
+  text-align: center;
+
+  
+}
+
+
+.paragrafo{
+  
+font-family: "Noto Serif", serif;
+  font-optical-sizing: auto;
+  font-size: 16px;
+
+
+}
+
+.link{
+
+  font-family: "Noto Serif", serif;
+  font-optical-sizing: auto;
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 200px;
+  margin-top: 50px;
+  font-weight: bold;
+  color:blue;
+}
+
+.tabella-recinzioni {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 50px;
+  font-family: "Noto Serif", serif;
+  font-size: 16px;
+  
+}
+
+.td{
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.th{
+ 
+  font-family: "Noto Serif", serif;
+  font-size: 20px;
+  font-weight: bold;
+
+}

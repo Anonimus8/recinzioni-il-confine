@@ -1,0 +1,18 @@
+.immagine-cliccabile {
+  cursor: pointer;
+  transition: opacity 0.2s ease; /* Rende l'effetto di transizione fluido */
+  margin-left: 30px;
+}
+
+.immagine-cliccabile:hover {
+  opacity: 0.8;
+}
+
+.galleria-immagini {
+  display: flex;             /* Attiva la disposizione in fila (orizzontale) */
+  justify-content: center;   /* Centra tutte le immagini nella pagina */
+  gap: 20px;                 /* Crea uno spazio uniforme di 20px tra una foto e l'altra */
+  flex-wrap: wrap;           /* Se lo schermo è piccolo (es. smartphone), manda le foto a capo */
+  margin-top: 30px;          /* Sposta l'intera galleria un po' più in basso dal testo sopra */
+  margin-bottom: 30px;       /* Lascia spazio prima dei blocchi successivi */
+}
