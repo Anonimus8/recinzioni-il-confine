@@ -50,32 +50,35 @@
     display: block;            /* Mantiene le proporzioni dell'immagine */
 }
 
-
 img {
   max-width: 100% !important;
   height: auto !important;
-  display: block;
+  display: block !important;
+  margin: 10px auto !important;
 }
 
-/* 2. Elimina lo scorrimento orizzontale che fa sembrare il sito storto */
-html, body {
-  overflow-x: hidden !important;
-  width: 100% !important;
-  margin: 0 !important;
+/* Se le immagini sono dentro un contenitore (div/header), le mette in colonna */
+header, div, .container {
+  max-width: 100% !important;
+  box-sizing: border-box !important;
 }
 
-/* 3. Quando lo schermo è piccolo (cellulare), mette testo e immagini uno SOTTO l'altro */
+/* Se hai usato Flexbox o Float per affiancare le immagini del logo, le incolonna su schermi piccoli */
 @media (max-width: 768px) {
-  /* Se usi blocchi o righe affiancate, le incolonna in verticale */
-  div, section, .row, .container, .flex {
-    max-width: 100% !important;
-    box-sizing: border-box !important;
+  body {
+    padding: 15px !important;
   }
-
-  /* Se nel tuo CSS avevi usato flexbox o float per affiancare testo e foto */
-  [class*="col-"], .hero, .about, .servizi {
+  
+  /* Dispone tutti gli elementi affiancati uno SOTTO l'altro */
+  header, div, section, .row {
     display: flex !important;
     flex-direction: column !important;
-    width: 100% !important;
+    align-items: center !important;
+  }
+
+  /* Centra i link e li rende più facili da cliccare col dito */
+  a {
+    word-break: break-word;
+    text-align: center;
   }
 }
